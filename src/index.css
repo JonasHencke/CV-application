@@ -5,9 +5,225 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #27374D;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.form {
+  background-color: #9DB2BF;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 10px;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 5px;
+  color: #27374D;
+  border-radius: 10px;
+  margin-left: 70px;
+}
+
+.form input, .form textarea {
+  background-color: #DDE6ED;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  color: #27374D;
+  font-size: 17px
+}
+
+.form textarea {
+  height: 200px;
+  width: 320px;
+  text-align: start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    resize: none;
+}
+.input--container {
+  display: flex;
+  gap: 10px; 
+}
+
+.input--container input {
+  width: 100%;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.form h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.CV {
+  position: fixed;
+  height: 707px;
+  width: 500px;
+  background-color: white;
+  top: 50px;
+  right: 200px;
+  border-radius: 3px;
+  color: black;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.CV--headline {
+  font-size: 15px;;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+.CV--headline:after
+{
+    content:' ';
+    display:block;
+    border:2px solid #9DB2BF;
+}
+.CV--left, .CV--right{
+  margin: 20px;
+  font-size: 10px;;
+}
+
+.CV--img {
+  max-width: 140px;
+}
+
+.CV--firstName {
+  margin-top: 5px;
+  font-weight: 800;
+  font-size: 18px
+}
+
+.CV--lastName {
+  font-weight: 800;
+  font-size: 21px;
+  color: #9DB2BF;
+}
+
+.CV--title {
+  margin-top: 8px;;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.CV--icon {
+  max-width: 13px;
+  margin-right: 5px;
+}
+
+.CV--aboutMe {
+  font-size: 11px;
+  text-align:left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bundle {
+  margin-top: 9px;;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  margin-bottom: 5px;
+}
+
+.CV ul {
+  font-size: 14px;
+  padding-left: 15px
+}
+
+.Form--skillBtn {
+  border: none;
+  background-color:#27374D;
+  border-radius: 5px;
+  color: white;
+}
+
+.Form--skillBundle {
+  display: flex;
+  gap: 10px;
+  
+  justify-content: space-between;
+}
+
+.Form--skillBundle input {
+  width: 330px;
+}
+
+.Form--addSKillBtn {
+  height: 20px;
+  width: 100px;
+  background-color: #27374D;
+  color: #9DB2BF;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 900;
+  
+}
+
+.Form--addSKillBtn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.Form--deleteSkillBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  length: 15px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #27374D;
+}
+
+.Form--icon {
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.CV--arrayBundle {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 14px;
+  margin-top: 5px;
+}
+
+.CV--timeframe {
+  font-size: 13px;
+}
+
+.CV--position {
+  margin-top: 1px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 1px;
+}
+
+.CV--institution {
+  font-size: 13px;
+  margin-bottom: 5px;;
+}
+
+.CV--description {
+  font-size: 11px;
+}
+
+.form--workExperience input {
+  min-width: 320px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #27374D;
+}
+
+.form--inputLarge {
+  height: 250px;
 }
