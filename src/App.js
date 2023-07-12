@@ -1,8 +1,9 @@
 import './App.css';
 import Form from './Form';
 import CV from './CV';
-import React,{useEffect, useState} from "react"
+import React,{useState} from "react"
 import { nanoid } from 'nanoid'
+import { jsPDF } from "jspdf"
 
 function App() {
 
@@ -26,6 +27,14 @@ function App() {
   const [skills, setSkills] = useState([{value: "Python", name:"hallo", key: nanoid()},{value: "Javascript", name:"hallo2", key: nanoid()},{value: "NodeJS", name:"hallo3", key: nanoid()}])
   const [workExperience, setWorkExperience] = useState([{timeframe: "2020 - 2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()},{timeframe: "2020-2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()}]);
   const [education, setEducation] = useState([{timeframe: "2023 - 2023", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()},{timeframe: "2020-2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()}]);
+
+  const doc = new jsPDF();
+
+  doc.text("Hello world!", 10, 10);
+
+  function downloadPDF() {
+    doc.save("a4.pdf");
+  }
 
   // skills: [], workExperience
   function handleSkillsChange(event) {
@@ -54,13 +63,6 @@ function App() {
     }))
   }
 
-  function consoleLoggy(event) {
-    console.log(event.target);
-    const {name, value, key2} = event.target;
-    console.log(name, value, key2);
-    console.log(event.target.getAttribute('keyw'))
-  }
-
   const newSkill = {value: "", name: nanoid(), key: nanoid()}
 
   function addSkill() {
@@ -86,7 +88,7 @@ function App() {
 
   return (
   <div >
-   <Form value={title} method={handleTitleChange} method2={handleSkillsChange} skills={skills} addSkill={addSkill} removeSkill={removeSkill} workExperience={workExperience} education={education} method3={handleWorkExperienceChange} method4={handleEducationChange}/>
+   <Form value={title} method={handleTitleChange} method2={handleSkillsChange} skills={skills} addSkill={addSkill} removeSkill={removeSkill} workExperience={workExperience} education={education} method3={handleWorkExperienceChange} method4={handleEducationChange} downloadPDF={downloadPDF}/>
    <CV value={title} skills={skills} workExperience={workExperience} education={education}/>
   </div>
   );

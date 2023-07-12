@@ -55,7 +55,9 @@ export default function Form(props) {
             <div className="form">
                 <h1>Erfahrung</h1>
                 {mapWorkExperience}
+                <button className="Form--addSKillBtn" onClick={props.downloadPDF}>Lebenslauf Herunterladen</button>
             </div>
+            
         </div>
     )
 }
