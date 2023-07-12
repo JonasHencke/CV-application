@@ -29,11 +29,11 @@ export default function CV(props) {
         <div className="CV">
             <div className="CV--left">
                 <div className="CV--img--container">
-                    <img className="CV--img" src={props.value.imgURL} alt="your goes here"/>
+                    <img className="CV--img" src={(props.value.imgURL != "") ? props.value.imgURL : "https://upload.wikimedia.org/wikipedia/commons/a/a7/Blank_portrait%2C_male_%28rectangular%29.png" } alt="your goes here"/>
                 </div>
                 <div className="CV--firstName">{props.value.firstName.toUpperCase()}</div>
                 <div className="CV--lastName">{props.value.lastName.toUpperCase()}</div>
-                <div className="CV--title">CREATIVE DESIGNER</div>
+                <div className="CV--title">{props.value.jobTitle.toUpperCase()}</div>
                 <div className="CV--headline">KONTAKT</div>
                 <div className="bundle"><img className="CV--icon" src={location}/>{props.value.address}</div>
                 <div className="bundle"><img className="CV--icon" src={telephone} width="80"/>{props.value.phone}</div>

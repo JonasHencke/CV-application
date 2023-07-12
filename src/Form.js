@@ -37,10 +37,12 @@ export default function Form(props) {
                     <input type="text" name="firstName" value={props.value.firstName} placeholder="Vorname" onChange={props.method}/>
                     <input type="text" name="lastName" value={props.value.lastName} placeholder="Nachname" onChange={props.method}/>
                 </div>
+                <input type="text" name="jobTitle" value={props.value.jobTitle} placeholder="Berufstitel" onChange={props.method}/>
                 <input type="text" name="address" value={props.value.address} placeholder="Adresse" onChange={props.method}/>
                 <input type="text" name="website" value={props.value.website} placeholder="Webseite" onChange={props.method}/>
                 <input type="text" name="email" value={props.value.email} placeholder="E-Mail" onChange={props.method}/>
                 <input type="text" name="phone" value={props.value.phone} placeholder="Telefonnummer" onChange={props.method}/>
+                <input type="text" name="imgURL" value={props.value.imgURL} placeholder="Profilbild-URL" onChange={props.method}/>
                 <textarea type="text" name="Beschreibung" value={props.value.Beschreibung} placeholder="Über dich" onChange={props.method}/>
             </div>
             <div className="form">

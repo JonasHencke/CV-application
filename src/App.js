@@ -8,8 +8,9 @@ import { jsPDF } from "jspdf"
 function App() {
 
   const [title, setTitle] = useState({
-    imgURL: "https://media.istockphoto.com/id/545655398/de/foto/freundliches-bewerbungsfoto.jpg?s=612x612&w=0&k=20&c=cG-sUkc56KjXxlLXIdGKrHLLvzJfltqGDEfGCPCx2UQ=",
+    imgURL: "",
     firstName: "",
+    jobTitle: "",
     lastName: "",
     address: "",
     website: "",
@@ -24,9 +25,9 @@ function App() {
     schuleZeitraum: "",
   });
 
-  const [skills, setSkills] = useState([{value: "Python", name:"hallo", key: nanoid()},{value: "Javascript", name:"hallo2", key: nanoid()},{value: "NodeJS", name:"hallo3", key: nanoid()}])
-  const [workExperience, setWorkExperience] = useState([{timeframe: "2020 - 2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()},{timeframe: "2020-2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()}]);
-  const [education, setEducation] = useState([{timeframe: "2023 - 2023", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()},{timeframe: "2020-2021", jobTitle:"Hausmeister", company:"Faber Castell", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,", name: nanoid(), key: nanoid()}]);
+  const [skills, setSkills] = useState([{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()}])
+  const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
+  const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
   const doc = new jsPDF();
 
