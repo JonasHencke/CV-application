@@ -1,7 +1,7 @@
 import telephone from "./telephone-receiver-material-svgrepo-com.svg"
 import location from "./location-pin-svgrepo-com.svg"
 import email from "./email-svgrepo-com.svg"
-
+import defaultProfile from "./Blank_portrait,_male_(rectangular).png"
 export default function CV(props) {
 
     const mapSkills = props.skills.map(
@@ -26,10 +26,10 @@ export default function CV(props) {
      )   
 
     return (
-        <div className="CV">
+        <div id="capture" className="CV">
             <div className="CV--left">
                 <div className="CV--img--container">
-                    <img className="CV--img" src={(props.value.imgURL != "") ? props.value.imgURL : "https://upload.wikimedia.org/wikipedia/commons/a/a7/Blank_portrait%2C_male_%28rectangular%29.png" } alt="your goes here"/>
+                    <img className="CV--img" src={defaultProfile} alt="your goes here"/>
                 </div>
                 <div className="CV--firstName">{props.value.firstName.toUpperCase()}</div>
                 <div className="CV--lastName">{props.value.lastName.toUpperCase()}</div>

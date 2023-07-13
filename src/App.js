@@ -2,8 +2,9 @@ import './App.css';
 import Form from './Form';
 import CV from './CV';
 import React,{useState} from "react"
-import { nanoid } from 'nanoid'
+import { nanoid } from "nanoid"
 import { jsPDF } from "jspdf"
+import html2canvas from "html2canvas"
 
 function App() {
 
@@ -29,13 +30,15 @@ function App() {
   const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
   const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
-  const doc = new jsPDF();
-
-  doc.text("Hello world!", 10, 10);
-
   function downloadPDF() {
-    doc.save("a4.pdf");
-  }
+    let element = document.getElementById("capture");
+    html2canvas(element, {allowTaint: true}).then(function(canvas) {
+    let image = canvas.toDataURL("image/png");
+    const resume = new jsPDF();
+
+    resume.addImage(image, 0, 0)
+    resume.save("resume")
+  })}
 
   // skills: [], workExperience
   function handleSkillsChange(event) {
