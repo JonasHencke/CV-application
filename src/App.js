@@ -31,13 +31,13 @@ function App() {
   const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
   function downloadPDF() {
-    let element = document.getElementById("capture");
-    html2canvas(element, {allowTaint: true}).then(function(canvas) {
-    let image = canvas.toDataURL("image/png");
-    const resume = new jsPDF();
-
-    resume.addImage(image, 0, 0)
-    resume.save("resume")
+    let screenshot = document.getElementById("capture");
+    html2canvas(screenshot).then(
+      function(screenshot) {
+        let image = screenshot.toDataURL("image/png");
+        const resume = new jsPDF();
+        resume.addImage(image, 'PNG', 0, 0, 210, 297);
+        resume.save("resume")
   })}
 
   // skills: [], workExperience
