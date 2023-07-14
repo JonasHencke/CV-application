@@ -42,7 +42,7 @@ export default function Form(props) {
                 <input type="text" name="website" value={props.value.website} placeholder="Webseite" onChange={props.method}/>
                 <input type="text" name="email" value={props.value.email} placeholder="E-Mail" onChange={props.method}/>
                 <input type="text" name="phone" value={props.value.phone} placeholder="Telefonnummer" onChange={props.method}/>
-                <input type="text" name="imgURL" value={props.value.imgURL} placeholder="Profilbild-URL" onChange={props.method}/>
+                <input type="file" id="file" onChange={(e) => props.setPhoto(URL.createObjectURL(e.target.files[0]))} accept="image/jpeg, image/png, image/jpg" placeholder="Profilbild"/>
                 <textarea type="text" name="Beschreibung" value={props.value.Beschreibung} placeholder="Über dich" onChange={props.method}/>
             </div>
             <div className="form">

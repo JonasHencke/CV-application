@@ -29,7 +29,7 @@ export default function CV(props) {
         <div id="capture" className="CV">
             <div className="CV--left">
                 <div className="CV--img--container">
-                    <img className="CV--img" src={defaultProfile} alt="your goes here"/>
+                    <img id="image" className="CV--img" src={(props.photo) ? props.photo : defaultProfile} alt="your goes here"/>
                 </div>
                 <div className="CV--firstName">{props.value.firstName.toUpperCase()}</div>
                 <div className="CV--lastName">{props.value.lastName.toUpperCase()}</div>

@@ -9,7 +9,6 @@ import html2canvas from "html2canvas"
 function App() {
 
   const [title, setTitle] = useState({
-    imgURL: "",
     firstName: "",
     jobTitle: "",
     lastName: "",
@@ -26,6 +25,7 @@ function App() {
     schuleZeitraum: "",
   });
 
+  const [photo, setPhoto]  = useState()
   const [skills, setSkills] = useState([{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()}])
   const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
   const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
@@ -90,10 +90,33 @@ function App() {
     }))
 }
 
+  function handlePhoto(event) {
+      setPhoto(event.target.file[0])
+      console.log(event.target.file[0])
+  }
+
   return (
   <div >
-   <Form value={title} method={handleTitleChange} method2={handleSkillsChange} skills={skills} addSkill={addSkill} removeSkill={removeSkill} workExperience={workExperience} education={education} method3={handleWorkExperienceChange} method4={handleEducationChange} downloadPDF={downloadPDF}/>
-   <CV value={title} skills={skills} workExperience={workExperience} education={education}/>
+   <Form value={title}
+         method={handleTitleChange}
+         method2={handleSkillsChange}
+         skills={skills}
+         addSkill={addSkill}
+         removeSkill={removeSkill}
+         workExperience={workExperience}
+         education={education}
+         method3={handleWorkExperienceChange}
+         method4={handleEducationChange}
+         downloadPDF={downloadPDF}
+         setPhoto={setPhoto}
+         photo={photo}
+         handlePhoto={handlePhoto}
+    />
+   <CV value={title}
+       skills={skills}
+       workExperience={workExperience}
+       education={education}
+       photo={photo}/>
   </div>
   );
 }
