@@ -26,7 +26,7 @@ function App() {
   });
 
   const [photo, setPhoto]  = useState()
-  const [skills, setSkills] = useState([{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()},{value: "", name:"", key: nanoid()}])
+  const [skills, setSkills] = useState([{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()}])
   const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
   const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
