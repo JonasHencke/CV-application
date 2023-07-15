@@ -4,25 +4,25 @@ import { nanoid } from 'nanoid'
 export default function Form(props) {
 
     const mapSkills = props.skills.map(
-        skill => <div className="Form--skillBundle"><input type="text" name={skill.name} value={skill.value} key={skill.key} onChange={props.method2}/><div className="Form--deleteSkillBtn" onClick={props.removeSkill(skill.key)}><img className="Form--icon" src={trashbin}/></div></div> )
+        skill => <div className="Form--skillBundle"><input type="text" placeholder="Fähigkeit" name={skill.name} value={skill.value} key={skill.key} onChange={props.method2}/><div className="Form--deleteSkillBtn" onClick={props.removeSkill(skill.key)}><img className="Form--icon" src={trashbin}/></div></div> )
     
     const mapWorkExperience = props.workExperience.map(
         workExperience =>
         <div key={workExperience.key} className="form--workExperience">
-            <input type="text" keyw={workExperience.key} name="timeframe" value={workExperience.timeframe} onChange={props.method3}></input>
-            <input type="text" keyw={workExperience.key} name="jobTitle" value={workExperience.jobTitle} onChange={props.method3}></input>
-            <input type="text" keyw={workExperience.key} name="company" value={workExperience.company}  onChange={props.method3}></input>
-            <textarea type="text" keyw={workExperience.key} name="description" value={workExperience.description}  onChange={props.method3}></textarea>
+            <input type="text" keyw={workExperience.key} placeholder="Zeitraum" name="timeframe" value={workExperience.timeframe} onChange={props.method3}></input>
+            <input type="text" keyw={workExperience.key} placeholder="Titel" name="jobTitle" value={workExperience.jobTitle} onChange={props.method3}></input>
+            <input type="text" keyw={workExperience.key} placeholder="Unternehmen" name="company" value={workExperience.company}  onChange={props.method3}></input>
+            <textarea type="text" keyw={workExperience.key} placeholder="Beschreibung" name="description" value={workExperience.description}  onChange={props.method3}></textarea>
         </div>
     )
 
     const mapEducation = props.education.map(
         education =>
         <div key={education.key} className="form--workExperience">
-            <input type="text" keyw={education.key} name="timeframe" value={education.timeframe} onChange={props.method4}></input>
-            <input type="text" keyw={education.key} name="jobTitle" value={education.jobTitle} onChange={props.method4}></input>
-            <input type="text" keyw={education.key} name="company" value={education.company}  onChange={props.method4}></input>
-            <textarea type="text" keyw={education.key} name="description" value={education.description}  onChange={props.method4}></textarea>
+            <input type="text" keyw={education.key} placeholder="Zeitraum" name="timeframe" value={education.timeframe} onChange={props.method4}></input>
+            <input type="text" keyw={education.key} placeholder="Titel" name="jobTitle" value={education.jobTitle} onChange={props.method4}></input>
+            <input type="text" keyw={education.key} placeholder="Unternehmen" name="company" value={education.company}  onChange={props.method4}></input>
+            <textarea type="text" keyw={education.key} placeholder="Beschreibung" name="description" value={education.description}  onChange={props.method4}></textarea>
         </div>
     )
 
