@@ -27,16 +27,17 @@ code {
   margin-left: 70px;
 }
 
-.form input, .form textarea {
+.form .form--input, textarea {
   background-color: #DDE6ED;
   border: none;
   border-radius: 5px;
   height: 20px;
   color: #27374D;
-  font-size: 17px
+  font-size: 17px;
+  max-width: 320px;
 }
 
-.form textarea {
+textarea {
   height: 200px;
   width: 320px;
   text-align: start;
@@ -185,8 +186,9 @@ textarea:focus, input:focus{
 }
 
 .Form--icon {
-  min-width: 10px;
-  min-height: 10px;
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 5px;
 }
 
 .CV--arrayBundle {
@@ -226,4 +228,15 @@ textarea:focus, input:focus{
 
 .form--inputLarge {
   height: 250px;
+}
+.displayNone {
+  display: none
+}
+.uploadBtn {
+  font-size: 15px;
+  color:#9DB2BF;
+  background-color: #27374D;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 0 auto;
 }

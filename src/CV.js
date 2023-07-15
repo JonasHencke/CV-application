@@ -1,6 +1,6 @@
-import telephone from "./telephone-receiver-material-svgrepo-com.svg"
-import location from "./location-pin-svgrepo-com.svg"
-import email from "./email-svgrepo-com.svg"
+import telephone from "./SVG/telephone-receiver-material-svgrepo-com.svg"
+import location from "./SVG/location-pin-svgrepo-com.svg"
+import email from "./SVG/email-svgrepo-com.svg"
 import defaultProfile from "./Blank_portrait,_male_(rectangular).png"
 export default function CV(props) {
 
