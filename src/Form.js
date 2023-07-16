@@ -1,12 +1,11 @@
 import trashbin from "./SVG/trash-full-svgrepo-com.svg"
 import downloadSVG from "./SVG/download-svgrepo-com.svg"
 import uploadPhotoSVG from "./SVG/photo-upload-svgrepo-com.svg"
-import { nanoid } from 'nanoid'
 
 export default function Form(props) {
 
     const mapSkills = props.skills.map(
-        skill => <div className="Form--skillBundle"><input className="form--input" type="text" placeholder="Fähigkeit" name={skill.name} value={skill.value} key={skill.key} onChange={props.method2}/><div className="Form--deleteSkillBtn" onClick={props.removeSkill(skill.key)}><img className="Form--icon" src={trashbin}/></div></div> )
+        skill => <div className="Form--skillBundle"><input className="form--input" type="text" placeholder="Fähigkeit" name={skill.name} value={skill.value} key={skill.key} onChange={props.method2}/><div className="Form--deleteSkillBtn" onClick={props.removeSkill(skill.key)}><img className="Form--icon" src={trashbin} alt="delete"/></div></div> )
     
     const mapWorkExperience = props.workExperience.map(
         workExperience =>
@@ -46,7 +45,7 @@ export default function Form(props) {
                 <input className="form--input" type="text" name="phone" value={props.value.phone} placeholder="Telefonnummer" onChange={props.method}/>
                 <textarea type="text" name="Beschreibung" value={props.value.Beschreibung} placeholder="Über dich" onChange={props.method}/>
                 <input className="displayNone" type="file" id="file" onChange={(e) => props.setPhoto(URL.createObjectURL(e.target.files[0]))} accept="image/jpeg, image/png, image/jpg"/>
-                <label className="uploadBtn" for="file"><img className="Form--icon" src={uploadPhotoSVG}></img>Upload Photo</label>
+                <label className="uploadBtn" for="file"><img className="Form--icon" src={uploadPhotoSVG} alt="upload icon"></img>Upload Photo</label>
             </div>
 
             <div className="form">
@@ -61,7 +60,7 @@ export default function Form(props) {
             <div className="form">
                 <h1>Erfahrung</h1>
                 {mapWorkExperience}
-                <button className="downloadBtn" onClick={props.downloadPDF}><img className="Form--icon" src={downloadSVG}></img>Lebenslauf Herunterladen</button>
+                <button className="downloadBtn" onClick={props.downloadPDF}><img className="Form--icon" src={downloadSVG} alt="download icon"></img>Lebenslauf Herunterladen</button>
             </div>
             
         </div>

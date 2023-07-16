@@ -36,10 +36,10 @@ export default function CV(props) {
                 <div className="CV--lastName">{props.value.lastName.toUpperCase()}</div>
                 <div className="CV--title">{props.value.jobTitle.toUpperCase()}</div>
                 <div className="CV--headline">KONTAKT</div>
-                <div className="bundle"><img className="CV--icon" src={location}/>{props.value.address}</div>
-                <div className="bundle"><img className="CV--icon" src={telephone} width="80"/>{props.value.phone}</div>
-                <div className="bundle"><img className="CV--icon" src={email}/>{props.value.email}</div>
-                <div className="bundle"><img className="CV--icon" src={website}/>{props.value.website}</div>
+                <div className="bundle"><img className="CV--icon" src={location} alt=""/>{props.value.address}</div>
+                <div className="bundle"><img className="CV--icon" src={telephone} alt=""/>{props.value.phone}</div>
+                <div className="bundle"><img className="CV--icon" src={email} alt=""/>{props.value.email}</div>
+                <div className="bundle"><img className="CV--icon" src={website} alt=""/>{props.value.website}</div>
                 <div className="CV--headline">FÄHIGKEITEN</div>
                 <ul>
                     {mapSkills}

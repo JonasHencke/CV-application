@@ -40,7 +40,6 @@ function App() {
         resume.save("resume")
   })}
 
-  // skills: [], workExperience
   function handleSkillsChange(event) {
     const {name, value} = event.target;
     setSkills(oldSKills => oldSKills.map( skill => {
@@ -97,7 +96,8 @@ function App() {
 
   return (
   <div >
-   <Form value={title}
+   <Form 
+         value={title}
          method={handleTitleChange}
          method2={handleSkillsChange}
          skills={skills}
@@ -112,7 +112,8 @@ function App() {
          photo={photo}
          handlePhoto={handlePhoto}
     />
-   <CV value={title}
+   <CV 
+       value={title}
        skills={skills}
        workExperience={workExperience}
        education={education}
