@@ -1,5 +1,6 @@
 import trashbin from "./SVG/trash-full-svgrepo-com.svg"
-import uploadSVG from "./SVG/download-svgrepo-com.svg"
+import downloadSVG from "./SVG/download-svgrepo-com.svg"
+import uploadPhotoSVG from "./SVG/photo-upload-svgrepo-com.svg"
 import { nanoid } from 'nanoid'
 
 export default function Form(props) {
@@ -45,7 +46,7 @@ export default function Form(props) {
                 <input className="form--input" type="text" name="phone" value={props.value.phone} placeholder="Telefonnummer" onChange={props.method}/>
                 <textarea type="text" name="Beschreibung" value={props.value.Beschreibung} placeholder="Über dich" onChange={props.method}/>
                 <input className="displayNone" type="file" id="file" onChange={(e) => props.setPhoto(URL.createObjectURL(e.target.files[0]))} accept="image/jpeg, image/png, image/jpg"/>
-                <label className="uploadBtn" for="file"><img className="Form--icon" src={uploadSVG}></img>Upload Photo</label>
+                <label className="uploadBtn" for="file"><img className="Form--icon" src={uploadPhotoSVG}></img>Upload Photo</label>
             </div>
 
             <div className="form">
@@ -60,7 +61,7 @@ export default function Form(props) {
             <div className="form">
                 <h1>Erfahrung</h1>
                 {mapWorkExperience}
-                <button className="Form--addSKillBtn" onClick={props.downloadPDF}>Lebenslauf Herunterladen</button>
+                <button className="downloadBtn" onClick={props.downloadPDF}><img className="Form--icon" src={downloadSVG}></img>Lebenslauf Herunterladen</button>
             </div>
             
         </div>

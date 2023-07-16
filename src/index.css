@@ -232,11 +232,16 @@ textarea:focus, input:focus{
 .displayNone {
   display: none
 }
-.uploadBtn {
+.uploadBtn, .downloadBtn {
   font-size: 15px;
   color:#9DB2BF;
   background-color: #27374D;
   border-radius: 3px;
   padding: 8px;
   margin: 0 auto;
+}
+
+.downloadBtn {
+  border: none;
+  box-shadow: none;
 }
