@@ -95,7 +95,7 @@ function App() {
   }
 
   return (
-  <div >
+  <div className="layout">
    <Form 
          value={title}
          method={handleTitleChange}

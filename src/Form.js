@@ -28,7 +28,7 @@ export default function Form(props) {
     )
 
     return (
-        <div>
+        <div className="form--layout">
             <div className="form">
                 <h1>Erstelle deinen Lebenslauf</h1>
             </div>
