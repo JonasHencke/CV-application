@@ -1,6 +1,7 @@
 import telephone from "./SVG/telephone-receiver-material-svgrepo-com.svg"
 import location from "./SVG/location-pin-svgrepo-com.svg"
 import email from "./SVG/email-svgrepo-com.svg"
+import website from "./SVG/website-webpage-url-domain-svgrepo-com.svg"
 import defaultProfile from "./Blank_portrait,_male_(rectangular).png"
 export default function CV(props) {
 
@@ -38,7 +39,8 @@ export default function CV(props) {
                 <div className="bundle"><img className="CV--icon" src={location}/>{props.value.address}</div>
                 <div className="bundle"><img className="CV--icon" src={telephone} width="80"/>{props.value.phone}</div>
                 <div className="bundle"><img className="CV--icon" src={email}/>{props.value.email}</div>
-                <div className="CV--headline">SKILLS</div>
+                <div className="bundle"><img className="CV--icon" src={website}/>{props.value.website}</div>
+                <div className="CV--headline">FÄHIGKEITEN</div>
                 <ul>
                     {mapSkills}
                 </ul>

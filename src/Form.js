@@ -50,7 +50,7 @@ export default function Form(props) {
             </div>
 
             <div className="form">
-                <h1>Skills</h1>
+                <h1>Fähigkeiten</h1>
                 {mapSkills}
                 <button className="Form--addSKillBtn" onClick={props.addSkill}>+</button>
             </div>
