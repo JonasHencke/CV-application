@@ -27,7 +27,7 @@ function App() {
 
   const [photo, setPhoto]  = useState()
   const [skills, setSkills] = useState([{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()}])
-  const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
+  const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
   const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
   function downloadPDF() {
@@ -65,9 +65,24 @@ function App() {
       {...education, [name]: value} : education
     }))
   }
+  const newWorkExperience = {timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}
+
+  function addWorkExperience() {
+    setWorkExperience([
+      ...workExperience,
+      newWorkExperience
+    ])
+  }
+
+  function removeWorkExperience(key) {
+    return function(){
+      setWorkExperience( workExperience.filter (a =>
+      a.key !== key))
+    }
+  }
 
   const newSkill = {value: "", name: nanoid(), key: nanoid()}
-
+  
   function addSkill() {
     setSkills([
       ...skills,
@@ -93,7 +108,7 @@ function App() {
       setPhoto(event.target.file[0])
       console.log(event.target.file[0])
   }
-
+  
   return (
   <div className="layout">
    <Form 
@@ -111,6 +126,8 @@ function App() {
          setPhoto={setPhoto}
          photo={photo}
          handlePhoto={handlePhoto}
+         addWorkExperience={addWorkExperience}
+         removeWorkExperience={removeWorkExperience}
     />
    <CV 
        value={title}

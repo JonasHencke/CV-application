@@ -125,11 +125,14 @@ textarea:focus, input:focus{
   max-height: 20px;
 }
 
-
 .form--workExperience input {
   margin-bottom: 10px;
   border-radius: 5px;
   color: #27374D;
+}
+
+.form--workExperience {
+  margin-bottom: 10px;
 }
 
 .form--inputLarge {
@@ -152,6 +155,14 @@ textarea:focus, input:focus{
   border: none;
   box-shadow: none;
 }
+
+.form--inputBundle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 /* ==================
     CV component
 ===================== */
@@ -278,5 +289,6 @@ textarea:focus, input:focus{
 
   .form--layout {
     width: 100%;
+    max-width: 640px;
   }
 }
