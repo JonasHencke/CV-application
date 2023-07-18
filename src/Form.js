@@ -29,11 +29,14 @@ export default function Form(props) {
 
     const mapEducation = props.education.map(
         education =>
+        <div className="form--inputBundle">
         <div key={education.key} className="form--workExperience">
             <input className="form--input" type="text" keyw={education.key} placeholder="Zeitraum" name="timeframe" value={education.timeframe} onChange={props.method4}></input>
             <input className="form--input" type="text" keyw={education.key} placeholder="Titel" name="jobTitle" value={education.jobTitle} onChange={props.method4}></input>
             <input className="form--input" type="text" keyw={education.key} placeholder="Unternehmen" name="company" value={education.company}  onChange={props.method4}></input>
             <textarea type="text" keyw={education.key} placeholder="Beschreibung" name="description" value={education.description}  onChange={props.method4}></textarea>
+        </div>
+        {props.education.length > 1 && <div className="Form--deleteSkillBtn" onClick={props.removeEducation(education.key)}><img className="Form--icon" src={trashbin} alt="delete"/></div>}
         </div>
     )
 
@@ -66,6 +69,7 @@ export default function Form(props) {
             <div className="form">
                 <h1>Ausbildung</h1>
                 {mapEducation}
+                {props.education.length < 3 && <button className="Form--addSKillBtn" onClick={props.addEducation}>+</button>}
             </div>
             <div className="form">
                 <h1>Erfahrung</h1>

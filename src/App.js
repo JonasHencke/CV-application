@@ -28,7 +28,7 @@ function App() {
   const [photo, setPhoto]  = useState()
   const [skills, setSkills] = useState([{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()}])
   const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
-  const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()},{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
+  const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
 
   function downloadPDF() {
     let screenshot = document.getElementById("capture");
@@ -65,6 +65,23 @@ function App() {
       {...education, [name]: value} : education
     }))
   }
+
+  const newEducation = {timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}
+
+  function addEducation() {
+    setEducation([
+      ...education,
+      newEducation
+    ])
+  }
+
+  function removeEducation(key) {
+    return function(){
+      setEducation( education.filter (a =>
+      a.key !== key))
+    }
+  }
+
   const newWorkExperience = {timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}
 
   function addWorkExperience() {
@@ -128,6 +145,8 @@ function App() {
          handlePhoto={handlePhoto}
          addWorkExperience={addWorkExperience}
          removeWorkExperience={removeWorkExperience}
+         addEducation={addEducation}
+         removeEducation={removeEducation}
     />
    <CV 
        value={title}
