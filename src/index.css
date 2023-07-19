@@ -157,7 +157,7 @@ textarea:focus, input:focus{
 }
 
 .CV--headline {
-  font-size: 15px;;
+  font-size: 15px;
   font-weight: bold;
   letter-spacing: 0.4px;
 }
@@ -196,7 +196,7 @@ textarea:focus, input:focus{
 }
 
 .CV--icon {
-  max-width: 17px;
+  max-width: 13px;
   margin-right: 5px;
 }
 
