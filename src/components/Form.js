@@ -1,6 +1,6 @@
-import trashbin from "./SVG/trash-full-svgrepo-com.svg";
-import downloadSVG from "./SVG/download-svgrepo-com.svg";
-import uploadPhotoSVG from "./SVG/photo-upload-svgrepo-com.svg";
+import trashbin from "../SVG/trash-full-svgrepo-com.svg";
+import downloadSVG from "../SVG/download-svgrepo-com.svg";
+import uploadPhotoSVG from "../SVG/photo-upload-svgrepo-com.svg";
 
 export default function Form(props) {
   const mapSkills = props.skills.map((skill) => (

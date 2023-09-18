@@ -1,6 +1,5 @@
-import './App.css';
-import Form from './Form';
-import CV from './CV';
+import Form from './components/Form';
+import CV from './components/CV';
 import React,{useState} from "react"
 import { nanoid } from "nanoid"
 import { jsPDF } from "jspdf"
