@@ -14,10 +14,7 @@ export default function Form(props) {
         key={skill.key}
         onChange={props.method2}
       />
-      <div
-        className="Form--deleteBtn"
-        onClick={props.removeSkill(skill.key)}
-      >
+      <div className="Form--deleteBtn" onClick={props.removeSkill(skill.key)}>
         <img className="Form--icon" src={trashbin} alt="delete" />
       </div>
     </div>

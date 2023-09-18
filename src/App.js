@@ -1,12 +1,11 @@
-import Form from './components/Form';
-import CV from './components/CV';
-import React,{useState} from "react"
-import { nanoid } from "nanoid"
-import { jsPDF } from "jspdf"
-import html2canvas from "html2canvas"
+import Form from "./components/Form";
+import CV from "./components/CV";
+import React, { useState } from "react";
+import { nanoid } from "nanoid";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 function App() {
-
   const [title, setTitle] = useState({
     firstName: "",
     jobTitle: "",
@@ -24,136 +23,169 @@ function App() {
     schuleZeitraum: "",
   });
 
-  const [photo, setPhoto]  = useState()
-  const [skills, setSkills] = useState([{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()},{value: "", name:nanoid(), key: nanoid()}])
-  const [workExperience, setWorkExperience] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
-  const [education, setEducation] = useState([{timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}]);
+  const [photo, setPhoto] = useState();
+  const [skills, setSkills] = useState([
+    { value: "", name: nanoid(), key: nanoid() },
+    { value: "", name: nanoid(), key: nanoid() },
+    { value: "", name: nanoid(), key: nanoid() },
+  ]);
+  const [workExperience, setWorkExperience] = useState([
+    {
+      timeframe: "",
+      jobTitle: "",
+      company: "",
+      description: "",
+      name: nanoid(),
+      key: nanoid(),
+    },
+  ]);
+  const [education, setEducation] = useState([
+    {
+      timeframe: "",
+      jobTitle: "",
+      company: "",
+      description: "",
+      name: nanoid(),
+      key: nanoid(),
+    },
+  ]);
 
   function downloadPDF() {
     let screenshot = document.getElementById("capture");
-    html2canvas(screenshot).then(
-      function(screenshot) {
-        let image = screenshot.toDataURL("image/png");
-        const resume = new jsPDF();
-        resume.addImage(image, 'PNG', 0, 0, 210, 297);
-        resume.save("resume")
-  })}
+    html2canvas(screenshot).then(function (screenshot) {
+      let image = screenshot.toDataURL("image/png");
+      const resume = new jsPDF();
+      resume.addImage(image, "PNG", 0, 0, 210, 297);
+      resume.save("resume");
+    });
+  }
 
   function handleSkillsChange(event) {
-    const {name, value} = event.target;
-    setSkills(oldSKills => oldSKills.map( skill => {
-      return skill.name === name ?
-      {...skill, value: value} : skill
-    }))
+    const { name, value } = event.target;
+    setSkills((oldSKills) =>
+      oldSKills.map((skill) => {
+        return skill.name === name ? { ...skill, value: value } : skill;
+      })
+    );
   }
 
   function handleWorkExperienceChange(event) {
-    const {name, value} = event.target;
-    const key2 = event.target.getAttribute('keyw')
-    setWorkExperience(oldWorkExperience => oldWorkExperience.map( workExperience => {
-      return workExperience.key === key2 ?
-      {...workExperience, [name]: value} : workExperience
-    }))
+    const { name, value } = event.target;
+    const key2 = event.target.getAttribute("keyw");
+    setWorkExperience((oldWorkExperience) =>
+      oldWorkExperience.map((workExperience) => {
+        return workExperience.key === key2
+          ? { ...workExperience, [name]: value }
+          : workExperience;
+      })
+    );
   }
 
   function handleEducationChange(event) {
-    const {name, value} = event.target;
-    const key2 = event.target.getAttribute('keyw')
-    setEducation(oldEducation => oldEducation.map( education => {
-      return education.key === key2 ?
-      {...education, [name]: value} : education
-    }))
+    const { name, value } = event.target;
+    const key2 = event.target.getAttribute("keyw");
+    setEducation((oldEducation) =>
+      oldEducation.map((education) => {
+        return education.key === key2
+          ? { ...education, [name]: value }
+          : education;
+      })
+    );
   }
 
-  const newEducation = {timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}
+  const newEducation = {
+    timeframe: "",
+    jobTitle: "",
+    company: "",
+    description: "",
+    name: nanoid(),
+    key: nanoid(),
+  };
 
   function addEducation() {
-    setEducation([
-      ...education,
-      newEducation
-    ])
+    setEducation([...education, newEducation]);
   }
 
   function removeEducation(key) {
-    return function(){
-      setEducation( education.filter (a =>
-      a.key !== key))
-    }
+    return function () {
+      setEducation(education.filter((a) => a.key !== key));
+    };
   }
 
-  const newWorkExperience = {timeframe: "", jobTitle:"", company:"", description:"", name: nanoid(), key: nanoid()}
+  const newWorkExperience = {
+    timeframe: "",
+    jobTitle: "",
+    company: "",
+    description: "",
+    name: nanoid(),
+    key: nanoid(),
+  };
 
   function addWorkExperience() {
-    setWorkExperience([
-      ...workExperience,
-      newWorkExperience
-    ])
+    setWorkExperience([...workExperience, newWorkExperience]);
   }
 
   function removeWorkExperience(key) {
-    return function(){
-      setWorkExperience( workExperience.filter (a =>
-      a.key !== key))
-    }
+    return function () {
+      setWorkExperience(workExperience.filter((a) => a.key !== key));
+    };
   }
 
-  const newSkill = {value: "", name: nanoid(), key: nanoid()}
-  
+  const newSkill = { value: "", name: nanoid(), key: nanoid() };
+
   function addSkill() {
-    setSkills([
-      ...skills,
-      newSkill
-    ])
+    setSkills([...skills, newSkill]);
   }
 
   function removeSkill(key) {
-    return function(){
-    setSkills( skills.filter(a =>
-    a.key !== key))}
+    return function () {
+      setSkills(skills.filter((a) => a.key !== key));
+    };
   }
 
   function handleTitleChange(event) {
-    const {name, value} = event.target
-    setTitle(prevName => ({
-        ...prevName,
-        [name]: value
-    }))
-}
+    const { name, value } = event.target;
+    setTitle((prevName) => ({
+      ...prevName,
+      [name]: value,
+    }));
+  }
 
   function handlePhoto(event) {
-      setPhoto(event.target.file[0])
-      console.log(event.target.file[0])
+    setPhoto(event.target.file[0]);
+    console.log(event.target.file[0]);
   }
-  
+
   return (
-  <div className="layout">
-   <Form 
-         value={title}
-         method={handleTitleChange}
-         method2={handleSkillsChange}
-         skills={skills}
-         addSkill={addSkill}
-         removeSkill={removeSkill}
-         workExperience={workExperience}
-         education={education}
-         method3={handleWorkExperienceChange}
-         method4={handleEducationChange}
-         downloadPDF={downloadPDF}
-         setPhoto={setPhoto}
-         photo={photo}
-         handlePhoto={handlePhoto}
-         addWorkExperience={addWorkExperience}
-         removeWorkExperience={removeWorkExperience}
-         addEducation={addEducation}
-         removeEducation={removeEducation}
-    />
-   <CV 
-       value={title}
-       skills={skills}
-       workExperience={workExperience}
-       education={education}
-       photo={photo}/>
-  </div>
+    <div className="layout">
+      <Form
+        value={title}
+        method={handleTitleChange}
+        method2={handleSkillsChange}
+        skills={skills}
+        addSkill={addSkill}
+        removeSkill={removeSkill}
+        workExperience={workExperience}
+        education={education}
+        method3={handleWorkExperienceChange}
+        method4={handleEducationChange}
+        downloadPDF={downloadPDF}
+        setPhoto={setPhoto}
+        photo={photo}
+        handlePhoto={handlePhoto}
+        addWorkExperience={addWorkExperience}
+        removeWorkExperience={removeWorkExperience}
+        addEducation={addEducation}
+        removeEducation={removeEducation}
+      />
+      <CV
+        value={title}
+        skills={skills}
+        workExperience={workExperience}
+        education={education}
+        photo={photo}
+      />
+    </div>
   );
 }
 
