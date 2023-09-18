@@ -26,6 +26,17 @@ body {
   --tertiary-color: #FFFFFF;
 }
 
+/* ==========================
+    prevent color changes of the input backgrounds 
+============================= */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 /* ==================
     Form component
 ===================== */
@@ -165,7 +176,7 @@ input:focus {
 
 .CV {
   position: fixed;
-  height: 707px;
+  height: 707px ;
   width: 500px;
   background-color: white;
   top: calc(50% - 353.5px);
