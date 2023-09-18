@@ -36,33 +36,33 @@ export default function CV(props) {
           />
         </div>
         <div className="CV--firstName">
-          {props.value.firstName.toUpperCase()}
+          {props.userData.firstName.toUpperCase()}
         </div>
-        <div className="CV--lastName">{props.value.lastName.toUpperCase()}</div>
-        <div className="CV--title">{props.value.jobTitle.toUpperCase()}</div>
+        <div className="CV--lastName">{props.userData.lastName.toUpperCase()}</div>
+        <div className="CV--title">{props.userData.jobTitle.toUpperCase()}</div>
         <div className="CV--headline">KONTAKT</div>
         <div className="bundle">
           <img className="CV--icon" src={location} alt="" />
-          {props.value.address}
+          {props.userData.address}
         </div>
         <div className="bundle">
           <img className="CV--icon" src={telephone} alt="" />
-          {props.value.phone}
+          {props.userData.phone}
         </div>
         <div className="bundle">
           <img className="CV--icon" src={email} alt="" />
-          {props.value.email}
+          {props.userData.email}
         </div>
         <div className="bundle">
           <img className="CV--icon" src={website} alt="" />
-          {props.value.website}
+          {props.userData.website}
         </div>
         <div className="CV--headline">FÄHIGKEITEN</div>
         <ul>{mapSkills}</ul>
       </div>
       <div className="CV--right">
         <div className="CV--headline">PROFIL</div>
-        <div className="CV--aboutMe">{props.value.Beschreibung}</div>
+        <div className="CV--aboutMe">{props.userData.Beschreibung}</div>
         <div className="CV--headline">AUSBILDUNG</div>
         {mapEducation}
         <div className="CV--headline">BERUFSERFAHRUNG</div>

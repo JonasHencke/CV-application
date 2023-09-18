@@ -6,7 +6,11 @@ import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
 function App() {
-  const [title, setTitle] = useState({
+
+  /* ====================
+      App State */
+
+  const [userData, setUserData] = useState({
     firstName: "",
     jobTitle: "",
     lastName: "",
@@ -50,6 +54,9 @@ function App() {
     },
   ]);
 
+  /* ==========================
+      PDF Download function */
+
   function downloadPDF() {
     let screenshot = document.getElementById("capture");
     html2canvas(screenshot).then(function (screenshot) {
@@ -59,6 +66,9 @@ function App() {
       resume.save("resume");
     });
   }
+
+  /* =====================================
+      Functions to handle State changes */
 
   function handleSkillsChange(event) {
     const { name, value } = event.target;
@@ -93,6 +103,22 @@ function App() {
     );
   }
 
+  function handleUserDataChange(event) {
+    const { name, value } = event.target;
+    setUserData((prevName) => ({
+      ...prevName,
+      [name]: value,
+    }));
+  }
+
+  function handlePhoto(event) {
+    setPhoto(event.target.file[0]);
+    console.log(event.target.file[0]);
+  }
+
+  /* ==================
+    Constants that can be added to state via add functions */
+
   const newEducation = {
     timeframe: "",
     jobTitle: "",
@@ -101,6 +127,20 @@ function App() {
     name: nanoid(),
     key: nanoid(),
   };
+
+  const newWorkExperience = {
+    timeframe: "",
+    jobTitle: "",
+    company: "",
+    description: "",
+    name: nanoid(),
+    key: nanoid(),
+  };
+
+  const newSkill = { value: "", name: nanoid(), key: nanoid() };
+
+  /* ==================
+    Functions to add/remove new objects to array of state*/
 
   function addEducation() {
     setEducation([...education, newEducation]);
@@ -112,15 +152,6 @@ function App() {
     };
   }
 
-  const newWorkExperience = {
-    timeframe: "",
-    jobTitle: "",
-    company: "",
-    description: "",
-    name: nanoid(),
-    key: nanoid(),
-  };
-
   function addWorkExperience() {
     setWorkExperience([...workExperience, newWorkExperience]);
   }
@@ -130,8 +161,6 @@ function App() {
       setWorkExperience(workExperience.filter((a) => a.key !== key));
     };
   }
-
-  const newSkill = { value: "", name: nanoid(), key: nanoid() };
 
   function addSkill() {
     setSkills([...skills, newSkill]);
@@ -143,32 +172,19 @@ function App() {
     };
   }
 
-  function handleTitleChange(event) {
-    const { name, value } = event.target;
-    setTitle((prevName) => ({
-      ...prevName,
-      [name]: value,
-    }));
-  }
-
-  function handlePhoto(event) {
-    setPhoto(event.target.file[0]);
-    console.log(event.target.file[0]);
-  }
-
   return (
     <div className="layout">
       <Form
-        value={title}
-        method={handleTitleChange}
-        method2={handleSkillsChange}
+        userData={userData}
+        handleUserDataChange={handleUserDataChange}
+        handleSkillsChange={handleSkillsChange}
         skills={skills}
         addSkill={addSkill}
         removeSkill={removeSkill}
         workExperience={workExperience}
         education={education}
-        method3={handleWorkExperienceChange}
-        method4={handleEducationChange}
+        handleWorkExperienceChange={handleWorkExperienceChange}
+        handleEducationChange={handleEducationChange}
         downloadPDF={downloadPDF}
         setPhoto={setPhoto}
         photo={photo}
@@ -179,7 +195,7 @@ function App() {
         removeEducation={removeEducation}
       />
       <CV
-        value={title}
+        userData={userData}
         skills={skills}
         workExperience={workExperience}
         education={education}

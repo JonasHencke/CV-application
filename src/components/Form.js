@@ -12,7 +12,7 @@ export default function Form(props) {
         name={skill.name}
         value={skill.value}
         key={skill.key}
-        onChange={props.method2}
+        onChange={props.handleSkillsChange}
       />
       <div className="Form--deleteBtn" onClick={props.removeSkill(skill.key)}>
         <img className="Form--icon" src={trashbin} alt="delete" />
@@ -30,7 +30,7 @@ export default function Form(props) {
           placeholder="Zeitraum"
           name="timeframe"
           value={workExperience.timeframe}
-          onChange={props.method3}
+          onChange={props.handleWorkExperienceChange}
         ></input>
         <input
           className="form--input"
@@ -39,7 +39,7 @@ export default function Form(props) {
           placeholder="Titel"
           name="jobTitle"
           value={workExperience.jobTitle}
-          onChange={props.method3}
+          onChange={props.handleWorkExperienceChange}
         ></input>
         <input
           className="form--input"
@@ -48,7 +48,7 @@ export default function Form(props) {
           placeholder="Unternehmen"
           name="company"
           value={workExperience.company}
-          onChange={props.method3}
+          onChange={props.handleWorkExperienceChange}
         ></input>
         <textarea
           type="text"
@@ -56,7 +56,7 @@ export default function Form(props) {
           placeholder="Beschreibung"
           name="description"
           value={workExperience.description}
-          onChange={props.method3}
+          onChange={props.handleWorkExperienceChange}
         ></textarea>
       </div>
       {props.workExperience.length > 1 && (
@@ -80,7 +80,7 @@ export default function Form(props) {
           placeholder="Zeitraum"
           name="timeframe"
           value={education.timeframe}
-          onChange={props.method4}
+          onChange={props.handleEducationChange}
         ></input>
         <input
           className="form--input"
@@ -89,7 +89,7 @@ export default function Form(props) {
           placeholder="Titel"
           name="jobTitle"
           value={education.jobTitle}
-          onChange={props.method4}
+          onChange={props.handleEducationChange}
         ></input>
         <input
           className="form--input"
@@ -98,7 +98,7 @@ export default function Form(props) {
           placeholder="Unternehmen"
           name="company"
           value={education.company}
-          onChange={props.method4}
+          onChange={props.handleEducationChange}
         ></input>
         <textarea
           type="text"
@@ -106,7 +106,7 @@ export default function Form(props) {
           placeholder="Beschreibung"
           name="description"
           value={education.description}
-          onChange={props.method4}
+          onChange={props.handleEducationChange}
         ></textarea>
       </div>
       {props.education.length > 1 && (
@@ -132,65 +132,65 @@ export default function Form(props) {
             className="form--input"
             type="text"
             name="firstName"
-            value={props.value.firstName}
+            value={props.userData.firstName}
             placeholder="Vorname"
-            onChange={props.method}
+            onChange={props.handleUserDataChange}
           />
           <input
             className="form--input"
             type="text"
             name="lastName"
-            value={props.value.lastName}
+            value={props.userData.lastName}
             placeholder="Nachname"
-            onChange={props.method}
+            onChange={props.handleUserDataChange}
           />
         </div>
         <input
           className="form--input"
           type="text"
           name="jobTitle"
-          value={props.value.jobTitle}
+          value={props.userData.jobTitle}
           placeholder="Berufstitel"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <input
           className="form--input"
           type="text"
           name="address"
-          value={props.value.address}
+          value={props.userData.address}
           placeholder="Adresse"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <input
           className="form--input"
           type="text"
           name="website"
-          value={props.value.website}
+          value={props.userData.website}
           placeholder="Webseite"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <input
           className="form--input"
           type="text"
           name="email"
-          value={props.value.email}
+          value={props.userData.email}
           placeholder="E-Mail"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <input
           className="form--input"
           type="text"
           name="phone"
-          value={props.value.phone}
+          value={props.userData.phone}
           placeholder="Telefonnummer"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <textarea
           type="text"
           name="Beschreibung"
-          value={props.value.Beschreibung}
+          value={props.userData.Beschreibung}
           placeholder="Über dich"
-          onChange={props.method}
+          onChange={props.handleUserDataChange}
         />
         <input
           style={{ display: "none" }}
