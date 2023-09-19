@@ -88,7 +88,7 @@ input:focus {
 }
 
 .input--container {
-  width: 100%;
+  width: calc(100% + 4px);
   gap: 1rem;
   display: flex;
 }
@@ -158,6 +158,9 @@ input:focus {
 .form--educationBundle {
   margin-bottom: 10px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .uploadBtn,
@@ -179,6 +182,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   margin-bottom: 15px;
+  width: 100%
 }
 
 /* ==================
