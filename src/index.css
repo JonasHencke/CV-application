@@ -324,3 +324,113 @@ input:focus {
     --shrink-factor: 0.5;
   }
 }
+
+
+/* ==================
+    CVPrint component
+===================== */
+
+.CVPrint {
+  position: fixed;
+  height: calc( 707px * 2) ;
+  width: calc( 500px * 2);
+  background-color: white;
+  top: calc(2 * (50% - 353.5px));
+  right: 20000px;
+  border-radius: 3px;
+  color: black;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.CVPrint--headline {
+  font-size: calc( 15px * 2);
+  font-weight: bold;
+  letter-spacing: calc( 0.4px * 2);
+}
+
+.CVPrint--headline:after {
+  content: " ";
+  display: block;
+  border: calc( 2px * 2) solid var(--secondary-color);
+}
+.CVPrint--left,
+.CVPrint--right {
+  margin: calc( 20px * 2);
+  font-size: calc( 10px * 2);
+}
+
+.CVPrint--img {
+  max-width: calc( 140px * 2);
+}
+
+.CVPrint--firstName {
+  margin-top: calc( 5px * 2);
+  font-size: calc( 18px * 2);
+  font-weight: 800;
+}
+
+.CVPrint--lastName {
+  font-weight: 800;
+  font-size: calc( 21px * 2);
+  color: var(--secondary-color);
+}
+
+.CVPrint--title {
+  margin-top: calc( 8px * 2);
+  font-size: calc( 13px * 2);
+  margin-bottom: calc( 20px * 2);
+}
+
+.CVPrint--icon {
+  max-width: calc( 13px * 2);
+  margin-right: calc( 5px * 2);
+}
+
+.CVPrint--aboutMe {
+  font-size: calc( 11px * 2);
+  margin-top: calc( 10px * 2);
+  margin-bottom: calc( 10px * 2);
+  text-align: left;
+}
+
+.CVPrint-bundle {
+  margin-top: calc( 9px * 2);
+  margin-bottom: calc( 5px * 2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.CVPrint ul {
+  font-size: calc( 14px * 2);
+  padding-left: calc( 15px * 2);
+}
+
+.CVPrint--arrayBundle {
+  display: flex;
+  flex-direction: column;
+  gap: calc( 1px * 2);
+  margin-bottom: calc( 14px * 2);
+  margin-top: calc( 5px * 2);
+}
+
+.CVPrint--timeframe {
+  font-size: calc( 13px * 2);
+}
+
+.CVPrint--position {
+  margin-top: calc( 1px * 2);
+  font-size: calc( 15px * 2);
+  margin-bottom: calc( 1px * 2);
+  font-weight: bold;
+}
+
+.CVPrint--institution {
+  font-size: calc( 13px * 2);
+  margin-bottom: calc( 5px * 2);
+}
+
+.CVPrint--description {
+  font-size: calc( 11px * 2);
+}

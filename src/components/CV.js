@@ -25,7 +25,7 @@ export default function CV(props) {
   ));
 
   return (
-    <div id="capture" className="CV">
+    <div className="CV">
       <div className="CV--left">
         <div className="CV--img--container">
           <img

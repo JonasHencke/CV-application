@@ -1,5 +1,6 @@
 import Form from "./components/Form";
 import CV from "./components/CV";
+import CVPrint from "./components/CVPrint";
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { jsPDF } from "jspdf";
@@ -195,6 +196,13 @@ function App() {
         removeEducation={removeEducation}
       />
       <CV
+        userData={userData}
+        skills={skills}
+        workExperience={workExperience}
+        education={education}
+        photo={photo}
+      />
+      <CVPrint
         userData={userData}
         skills={skills}
         workExperience={workExperience}
