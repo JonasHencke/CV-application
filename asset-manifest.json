@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/CV-application/static/css/main.26920cef.css",
-    "main.js": "/CV-application/static/js/main.531f7e9d.js",
+    "main.css": "/CV-application/static/css/main.89faf724.css",
+    "main.js": "/CV-application/static/js/main.7a1f7345.js",
     "static/js/703.ad1192fc.chunk.js": "/CV-application/static/js/703.ad1192fc.chunk.js",
     "static/js/573.45a4dc91.chunk.js": "/CV-application/static/js/573.45a4dc91.chunk.js",
+    "static/media/pexels-brenda-lelis-2899744.jpg": "/CV-application/static/media/pexels-brenda-lelis-2899744.62cf609461c3c048900b.jpg",
     "static/media/Blank_portrait,_male_(rectangular).png": "/CV-application/static/media/Blank_portrait,_male_(rectangular).f316e94dcc30a5f9f853.png",
     "static/media/telephone-receiver-material-svgrepo-com.svg": "/CV-application/static/media/telephone-receiver-material-svgrepo-com.95f8a4c094cedf9345ebd47ddbc3efc2.svg",
     "static/media/photo-upload-svgrepo-com.svg": "/CV-application/static/media/photo-upload-svgrepo-com.cf10df088e5edabacbe32c813f4a7928.svg",
@@ -13,13 +14,13 @@
     "index.html": "/CV-application/index.html",
     "static/media/download-svgrepo-com.svg": "/CV-application/static/media/download-svgrepo-com.f405bc27c09df587ab87c85d24cb5bf5.svg",
     "static/media/email-svgrepo-com.svg": "/CV-application/static/media/email-svgrepo-com.97e96510326438562b763c6c949fe9f4.svg",
-    "main.26920cef.css.map": "/CV-application/static/css/main.26920cef.css.map",
-    "main.531f7e9d.js.map": "/CV-application/static/js/main.531f7e9d.js.map",
+    "main.89faf724.css.map": "/CV-application/static/css/main.89faf724.css.map",
+    "main.7a1f7345.js.map": "/CV-application/static/js/main.7a1f7345.js.map",
     "703.ad1192fc.chunk.js.map": "/CV-application/static/js/703.ad1192fc.chunk.js.map",
     "573.45a4dc91.chunk.js.map": "/CV-application/static/js/573.45a4dc91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26920cef.css",
-    "static/js/main.531f7e9d.js"
+    "static/css/main.89faf724.css",
+    "static/js/main.7a1f7345.js"
   ]
 }
