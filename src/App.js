@@ -7,7 +7,6 @@ import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
 function App() {
-
   /* ====================
       App State */
 
@@ -19,13 +18,7 @@ function App() {
     website: "",
     email: "",
     phone: "",
-    Beschreibung: "",
-    uni: "",
-    uniAbschluss: "",
-    uniZeitraum: "",
-    school: "",
-    abschlussSchule: "",
-    schuleZeitraum: "",
+    Beschreibung: ""
   });
 
   const [photo, setPhoto] = useState();
@@ -49,7 +42,6 @@ function App() {
       timeframe: "",
       jobTitle: "",
       company: "",
-      description: "",
       name: nanoid(),
       key: nanoid(),
     },
@@ -173,6 +165,70 @@ function App() {
     };
   }
 
+  /* ==================
+    Functions to fill the Form with example input*/
+
+  function fillFormWithExample() {
+    setUserData({
+      firstName: "Erika",
+      jobTitle: "UX/UI-Designerin",
+      lastName: "Mustermann",
+      address: "Musterstraße 1, 12345 Musterstadt",
+      website: "www.erika-mustermann.de",
+      email: "erika.mustermann@gmx.de",
+      phone: "+49 123 45678",
+      Beschreibung: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus estAt vero eos et accusam et justo duo dolores et ea rebum. " 
+    });
+
+    setSkills([
+      { value: "Produkt-Design", name: nanoid(), key: nanoid() },
+      { value: "Branding", name: nanoid(), key: nanoid() },
+      { value: "Prototyping", name: nanoid(), key: nanoid() },
+      { value: "Mobile-Design", name: nanoid(), key: nanoid() },
+      { value: "Figma", name: nanoid(), key: nanoid() },
+      { value: "Adobe XD", name: nanoid(), key: nanoid() },
+      { value: "Adobe Indesign", name: nanoid(), key: nanoid() },
+      { value: "Marvel", name: nanoid(), key: nanoid() },
+      { value: "Adobe Photoshop", name: nanoid(), key: nanoid() }
+    ]);
+
+    setEducation([
+      {
+        timeframe: "2015 - 2018",
+        jobTitle: "Bachelor of Arts: Mediendesign",
+        company: "LMU München",
+        name: nanoid(),
+        key: nanoid(),
+      },
+      {
+        timeframe: "2018 - 2020",
+        jobTitle: "Master of Arts: Mediendesign",
+        company: "LMU München",
+        name: nanoid(),
+        key: nanoid(),
+      },
+    ]);
+
+    setWorkExperience([
+      {
+        timeframe: "2020 - 2022",
+        jobTitle: "Junior UX UI Designer",
+        company: "Musterfirma",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ut labore et dolore magna aliquyam erat.",
+        name: nanoid(),
+        key: nanoid(),
+      },
+      {
+        timeframe: "2022 - Heute",
+        jobTitle: "UX UI Designer",
+        company: "Musteragentur",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat ut labore et dolore magna aliquyam erat.",
+        name: nanoid(),
+        key: nanoid(),
+      },
+    ])
+  }
+
   return (
     <div className="layout">
       <Form
@@ -194,6 +250,7 @@ function App() {
         removeWorkExperience={removeWorkExperience}
         addEducation={addEducation}
         removeEducation={removeEducation}
+        fillFormWithExample={fillFormWithExample}
       />
       <CV
         userData={userData}

@@ -75,6 +75,11 @@ textarea {
   padding-left: 2px;
 }
 
+.form-button-bundle {
+  display: flex;
+  gap: 10px;
+}
+
 textarea {
   height: 200px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -252,7 +257,9 @@ input:focus {
 ul {
   list-style: none;
 }
-
+li {
+  margin-bottom: calc( 2px * var(--shrink-factor))
+}
 ul li::before {
   content: "\2022";
   color: #CEDEBD;
@@ -362,10 +369,10 @@ ul li::before {
 
 .CVPrint {
   position: fixed;
-  height: calc( 707px * 2) ;
-  width: calc( 500px * 2);
+  height: calc( 707px * 1.5) ;
+  width: calc( 500px * 1.5);
   background-color: white;
-  top: calc(2 * (50% - 353.5px));
+  top: calc(1.5 * (50% - 353.5px));
   right: 20000px;
   border-radius: 3px;
   color: black;
@@ -374,93 +381,93 @@ ul li::before {
 }
 
 .CVPrint--headline {
-  font-size: calc( 15px * 2);
+  font-size: calc( 15px * 1.5);
   font-weight: bold;
-  letter-spacing: calc( 0.4px * 2);
+  letter-spacing: calc( 0.4px * 1.5);
 }
 
 .CVPrint--headline:after {
   content: " ";
   display: block;
-  border: calc( 2px * 2) solid var(--secondary-color);
+  border: calc( 2px * 1.5) solid var(--secondary-color);
 }
 .CVPrint--left,
 .CVPrint--right {
-  margin: calc( 20px * 2);
-  font-size: calc( 10px * 2);
+  margin: calc( 20px * 1.5);
+  font-size: calc( 10px * 1.5);
 }
 
 .CVPrint--img {
-  max-width: calc( 140px * 2);
+  max-width: calc( 140px * 1.5);
 }
 
 .CVPrint--firstName {
-  margin-top: calc( 5px * 2);
-  font-size: calc( 18px * 2);
+  margin-top: calc( 5px * 1.5);
+  font-size: calc( 18px * 1.5);
   font-weight: 800;
 }
 
 .CVPrint--lastName {
   font-weight: 800;
-  font-size: calc( 21px * 2);
+  font-size: calc( 21px * 1.5);
   color: var(--secondary-color);
 }
 
 .CVPrint--title {
-  margin-top: calc( 8px * 2);
-  font-size: calc( 13px * 2);
-  margin-bottom: calc( 20px * 2);
+  margin-top: calc( 8px * 1.5);
+  font-size: calc( 13px * 1.5);
+  margin-bottom: calc( 20px * 1.5);
 }
 
 .CVPrint--icon {
-  max-width: calc( 13px * 2);
-  margin-right: calc( 5px * 2);
+  max-width: calc( 13px * 1.5);
+  margin-right: calc( 5px * 1.5);
 }
 
 .CVPrint--aboutMe {
-  font-size: calc( 11px * 2);
-  margin-top: calc( 10px * 2);
-  margin-bottom: calc( 10px * 2);
+  font-size: calc( 11px * 1.5);
+  margin-top: calc( 10px * 1.5);
+  margin-bottom: calc( 10px * 1.5);
   text-align: left;
 }
 
 .CVPrint-bundle {
-  margin-top: calc( 9px * 2);
-  margin-bottom: calc( 5px * 2);
+  margin-top: calc( 9px * 1.5);
+  margin-bottom: calc( 5px * 1.5);
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .CVPrint ul {
-  font-size: calc( 14px * 2);
-  padding-left: calc( 15px * 2);
+  font-size: calc( 14px * 1.5);
+  padding-left: calc( 15px * 1.5);
 }
 
 .CVPrint--arrayBundle {
   display: flex;
   flex-direction: column;
-  gap: calc( 1px * 2);
-  margin-bottom: calc( 14px * 2);
-  margin-top: calc( 5px * 2);
+  gap: calc( 1px * 1.5);
+  margin-bottom: calc( 14px * 1.5);
+  margin-top: calc( 5px * 1.5);
 }
 
 .CVPrint--timeframe {
-  font-size: calc( 13px * 2);
+  font-size: calc( 13px * 1.5);
 }
 
 .CVPrint--position {
-  margin-top: calc( 1px * 2);
-  font-size: calc( 15px * 2);
-  margin-bottom: calc( 1px * 2);
+  margin-top: calc( 1px * 1.5);
+  font-size: calc( 15px * 1.5);
+  margin-bottom: calc( 1px * 1.5);
   font-weight: bold;
 }
 
 .CVPrint--institution {
-  font-size: calc( 13px * 2);
-  margin-bottom: calc( 5px * 2);
+  font-size: calc( 13px * 1.5);
+  margin-bottom: calc( 5px * 1.5);
 }
 
 .CVPrint--description {
-  font-size: calc( 11px * 2);
+  font-size: calc( 11px * 1.5);
 }

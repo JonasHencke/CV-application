@@ -95,19 +95,12 @@ export default function Form(props) {
           className="form--input"
           type="text"
           keyw={education.key}
-          placeholder="Unternehmen"
+          placeholder="Institution"
           name="company"
           value={education.company}
           onChange={props.handleEducationChange}
         ></input>
-        <textarea
-          type="text"
-          keyw={education.key}
-          placeholder="Beschreibung"
-          name="description"
-          value={education.description}
-          onChange={props.handleEducationChange}
-        ></textarea>
+        
       </div>
       {props.education.length > 1 && (
         <div
@@ -124,6 +117,24 @@ export default function Form(props) {
     <div className="form--layout">
       <div className="form">
         <h1>Erstelle deinen Lebenslauf</h1>
+        <div className="form-button-bundle">
+        <button className="downloadBtn" onClick={props.downloadPDF}>
+          <img
+            className="Form--icon"
+            src={downloadSVG}
+            alt="download icon"
+          ></img>
+          als PDF Herunterladen
+        </button>
+        <button className="downloadBtn" onClick={props.fillFormWithExample}>
+          <img
+            className="Form--icon"
+            src={downloadSVG}
+            alt="download icon"
+          ></img>
+          Demo
+        </button>
+        </div>
       </div>
       <div className="form">
         <h1>Persönliches</h1>
@@ -238,14 +249,6 @@ export default function Form(props) {
             +
           </button>
         )}
-        <button className="downloadBtn" onClick={props.downloadPDF}>
-          <img
-            className="Form--icon"
-            src={downloadSVG}
-            alt="download icon"
-          ></img>
-          Lebenslauf Herunterladen
-        </button>
       </div>
     </div>
   );
