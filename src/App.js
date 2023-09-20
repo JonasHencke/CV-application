@@ -168,7 +168,8 @@ function App() {
   /* ==================
     Functions to fill the Form with example input*/
 
-  function fillFormWithExample() {
+  function fillFormWithExample(image) {
+    setPhoto(image);
     setUserData({
       firstName: "Erika",
       jobTitle: "UX/UI-Designerin",
