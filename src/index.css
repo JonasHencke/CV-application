@@ -72,6 +72,7 @@ textarea {
   color: var(--primary-color);
   font-size: 17px;
   width: 100%;
+  padding-left: 2px;
 }
 
 textarea {
@@ -89,8 +90,11 @@ input:focus {
 
 .input--container {
   width: calc(100% + 4px);
-  gap: 1rem;
+  padding: 0;
+  margin: 0;
   display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .form h1 {
@@ -156,7 +160,6 @@ input:focus {
 
 .form--workExperienceBundle,
 .form--educationBundle {
-  margin-bottom: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -181,7 +184,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
+  
   width: 100%
 }
 
@@ -242,8 +245,21 @@ input:focus {
 }
 
 .CV--icon {
-  max-width: calc( 13px * var(--shrink-factor));
-  margin-right: calc( 5px * var(--shrink-factor));
+  max-width: calc( 17px * var(--shrink-factor));
+  margin-right: calc( 6px * var(--shrink-factor));
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #CEDEBD;
+  font-weight: bold;
+  display: inline-block; 
+  width: 2em;
+  margin-left: -1em;
 }
 
 .CV--aboutMe {
