@@ -1,4 +1,5 @@
 # CV Application
+![](https://i.imgur.com/RDFZFNk.png)
 
 ## Beschreibung
 React Anwendung mit welcher man Lebensläufe erstellen und anschließend das Dokuement als PDF herunterladen kann.
