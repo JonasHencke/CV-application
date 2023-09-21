@@ -13,17 +13,15 @@ body {
   max-width: 100%;
 }
 
-
-
 /* ==================
     CSS variables
 ===================== */
 
 :root {
   --primary-color: #435334;
-  --secondary-color: #CEDEBD;
-  --tertiary-color: #FFFFFF;
-  --shrink-factor: 1
+  --secondary-color: #cedebd;
+  --tertiary-color: #ffffff;
+  --shrink-factor: 1;
 }
 
 /* ==========================
@@ -31,10 +29,10 @@ body {
 ============================= */
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 /* ==================
@@ -48,7 +46,7 @@ input:-webkit-autofill:active{
   width: 30%;
   margin-top: 40px;
   margin-left: 3rem;
-  margin-bottom: 3rem
+  margin-bottom: 3rem;
 }
 
 .form {
@@ -61,7 +59,7 @@ input:-webkit-autofill:active{
   border-radius: 5px;
   color: var(--primary-color);
   border-radius: 10px;
-  width: 100%
+  width: 100%;
 }
 
 .form--input,
@@ -175,16 +173,15 @@ input:focus {
   box-shadow: none;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .form--inputBundle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%
+  width: 100%;
 }
-
 
 /* ==================
     CV component
@@ -192,8 +189,8 @@ input:focus {
 
 .CV {
   position: fixed;
-  height: calc( 707px * var(--shrink-factor)) ;
-  width: calc( 500px * var(--shrink-factor));
+  height: calc(707px * var(--shrink-factor));
+  width: calc(500px * var(--shrink-factor));
   background-color: white;
   top: calc(var(--shrink-factor) * (50% - 353.5px));
   right: calc(var(--shrink-factor) * (27.5% - 230px));
@@ -204,109 +201,115 @@ input:focus {
 }
 
 .CV--headline {
-  font-size: calc( 15px * var(--shrink-factor));
+  font-size: calc(15px * var(--shrink-factor));
   font-weight: bold;
-  letter-spacing: calc( 0.4px * var(--shrink-factor));
+  letter-spacing: calc(0.4px * var(--shrink-factor));
 }
 
 .CV--headline:after {
   content: " ";
   display: block;
-  border: calc( 2px * var(--shrink-factor)) solid var(--secondary-color);
+  border: calc(2px * var(--shrink-factor)) solid var(--secondary-color);
 }
 .CV--left,
 .CV--right {
-  margin: calc( 20px * var(--shrink-factor));
-  font-size: calc( 10px * var(--shrink-factor));
+  margin: calc(20px * var(--shrink-factor));
+  font-size: calc(10px * var(--shrink-factor));
 }
 
 .CV--img {
-  max-width: calc( 140px * var(--shrink-factor));
+  max-width: calc(140px * var(--shrink-factor));
 }
 
 .CV--firstName {
-  margin-top: calc( 5px * var(--shrink-factor));
-  font-size: calc( 18px * var(--shrink-factor));
+  margin-top: calc(5px * var(--shrink-factor));
+  font-size: calc(18px * var(--shrink-factor));
   font-weight: 800;
 }
 
 .CV--lastName {
   font-weight: 800;
-  font-size: calc( 21px * var(--shrink-factor));
+  font-size: calc(21px * var(--shrink-factor));
   color: var(--secondary-color);
 }
 
 .CV--title {
-  margin-top: calc( 8px * var(--shrink-factor));
-  font-size: calc( 13px * var(--shrink-factor));
-  margin-bottom: calc( 20px * var(--shrink-factor));
+  margin-top: calc(8px * var(--shrink-factor));
+  font-size: calc(13px * var(--shrink-factor));
+  margin-bottom: calc(20px * var(--shrink-factor));
 }
 
 .CV--icon {
-  max-width: calc( 17px * var(--shrink-factor));
-  margin-right: calc( 6px * var(--shrink-factor));
+  max-width: calc(17px * var(--shrink-factor));
+  margin-right: calc(6px * var(--shrink-factor));
 }
 
 ul {
-  list-style: none;
-}
-li {
-  margin-bottom: calc( 2px * var(--shrink-factor))
+  list-style: none
 }
 ul li::before {
-  content: "\2022";
-  color: #CEDEBD;
-  font-weight: bold;
-  display: inline-block; 
-  
+  content: "\200B";
+  color: green;
+}
+
+li {
+  margin-bottom: calc(2px * var(--shrink-factor));
+}
+
+ul li::before {
+  content: "\25AA";
+  color: #cedebd;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .CV--aboutMe {
-  font-size: calc( 11px * var(--shrink-factor));
-  margin-top: calc( 10px * var(--shrink-factor));
-  margin-bottom: calc( 10px * var(--shrink-factor));
+  font-size: calc(11px * var(--shrink-factor));
+  margin-top: calc(10px * var(--shrink-factor));
+  margin-bottom: calc(10px * var(--shrink-factor));
   text-align: left;
 }
 
 .bundle {
-  margin-top: calc( 9px * var(--shrink-factor));
-  margin-bottom: calc( 5px * var(--shrink-factor));
+  margin-top: calc(9px * var(--shrink-factor));
+  margin-bottom: calc(5px * var(--shrink-factor));
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .CV ul {
-  font-size: calc( 14px * var(--shrink-factor));
-  padding-left: calc( 15px * var(--shrink-factor));
+  font-size: calc(14px * var(--shrink-factor));
+  padding-left: calc(15px * var(--shrink-factor));
 }
 
 .CV--arrayBundle {
   display: flex;
   flex-direction: column;
-  gap: calc( 1px * var(--shrink-factor));
-  margin-bottom: calc( 14px * var(--shrink-factor));
-  margin-top: calc( 5px * var(--shrink-factor));
+  gap: calc(1px * var(--shrink-factor));
+  margin-bottom: calc(14px * var(--shrink-factor));
+  margin-top: calc(5px * var(--shrink-factor));
 }
 
 .CV--timeframe {
-  font-size: calc( 13px * var(--shrink-factor));
+  font-size: calc(13px * var(--shrink-factor));
 }
 
 .CV--position {
-  margin-top: calc( 1px * var(--shrink-factor));
-  font-size: calc( 15px * var(--shrink-factor));
-  margin-bottom: calc( 1px * var(--shrink-factor));
+  margin-top: calc(1px * var(--shrink-factor));
+  font-size: calc(15px * var(--shrink-factor));
+  margin-bottom: calc(1px * var(--shrink-factor));
   font-weight: bold;
 }
 
 .CV--institution {
-  font-size: calc( 13px * var(--shrink-factor));
-  margin-bottom: calc( 5px * var(--shrink-factor));
+  font-size: calc(13px * var(--shrink-factor));
+  margin-bottom: calc(5px * var(--shrink-factor));
 }
 
 .CV--description {
-  font-size: calc( 11px * var(--shrink-factor));
+  font-size: calc(11px * var(--shrink-factor));
 }
 
 /* ==================
@@ -336,7 +339,6 @@ ul li::before {
   }
 }
 
-
 @media only screen and (max-width: 550px) {
   :root {
     --shrink-factor: 0.8;
@@ -355,15 +357,14 @@ ul li::before {
   }
 }
 
-
 /* ==================
     CVPrint component
 ===================== */
 
 .CVPrint {
   position: fixed;
-  height: calc( 707px * 1.5) ;
-  width: calc( 500px * 1.5);
+  height: calc(707px * 1.5);
+  width: calc(500px * 1.5);
   background-color: white;
   top: calc(1.5 * (50% - 353.5px));
   right: 20000px;
@@ -374,94 +375,93 @@ ul li::before {
 }
 
 .CVPrint--headline {
-  font-size: calc( 15px * 1.5);
+  font-size: calc(15px * 1.5);
   font-weight: bold;
-  letter-spacing: calc( 0.4px * 1.5);
+  letter-spacing: calc(0.4px * 1.5);
 }
 
 .CVPrint--headline:after {
   content: " ";
   display: block;
-  border: calc( 2px * 1.5) solid var(--secondary-color);
+  border: calc(2px * 1.5) solid var(--secondary-color);
 }
 .CVPrint--left,
 .CVPrint--right {
-  margin: calc( 20px * 1.5);
-  font-size: calc( 10px * 1.5);
+  margin: calc(20px * 1.5);
+  font-size: calc(10px * 1.5);
 }
 
 .CVPrint--img {
-  max-width: calc( 140px * 1.5);
+  max-width: calc(140px * 1.5);
 }
 
 .CVPrint--firstName {
-  margin-top: calc( 5px * 1.5);
-  font-size: calc( 18px * 1.5);
+  margin-top: calc(5px * 1.5);
+  font-size: calc(18px * 1.5);
   font-weight: 800;
 }
 
 .CVPrint--lastName {
   font-weight: 800;
-  font-size: calc( 21px * 1.5);
+  font-size: calc(21px * 1.5);
   color: var(--secondary-color);
 }
 
 .CVPrint--title {
-  margin-top: calc( 8px * 1.5);
-  font-size: calc( 13px * 1.5);
-  margin-bottom: calc( 20px * 1.5);
+  margin-top: calc(8px * 1.5);
+  font-size: calc(13px * 1.5);
+  margin-bottom: calc(20px * 1.5);
 }
 
 .CVPrint--icon {
-  max-width: calc( 13px * 1.5);
-  margin-right: calc( 5px * 1.5);
+  max-width: calc(13px * 1.5);
+  margin-right: calc(5px * 1.5);
 }
 
 .CVPrint--aboutMe {
-  font-size: calc( 11px * 1.5);
-  margin-top: calc( 10px * 1.5);
-  margin-bottom: calc( 10px * 1.5);
+  font-size: calc(11px * 1.5);
+  margin-top: calc(10px * 1.5);
+  margin-bottom: calc(10px * 1.5);
   text-align: left;
 }
 
 .CVPrint-bundle {
-  margin-top: calc( 9px * 1.5);
-  margin-bottom: calc( 5px * 1.5);
+  margin-top: calc(9px * 1.5);
+  margin-bottom: calc(5px * 1.5);
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .CVPrint ul {
-  font-size: calc( 14px * 1.5);
-  padding-left: calc( 15px * 1.5);
+  font-size: calc(14px * 1.5);
+  padding-left: calc(15px * 1.5);
 }
 
 .CVPrint--arrayBundle {
   display: flex;
   flex-direction: column;
-  gap: calc( 1px * 1.5);
-  margin-bottom: calc( 14px * 1.5);
-  margin-top: calc( 5px * 1.5);
+  gap: calc(1px * 1.5);
+  margin-bottom: calc(14px * 1.5);
+  margin-top: calc(5px * 1.5);
 }
 
 .CVPrint--timeframe {
-  font-size: calc( 13px * 1.5);
+  font-size: calc(13px * 1.5);
 }
 
 .CVPrint--position {
-  margin-top: calc( 1px * 1.5);
-  font-size: calc( 15px * 1.5);
-  margin-bottom: calc( 1px * 1.5);
+  margin-top: calc(1px * 1.5);
+  font-size: calc(15px * 1.5);
+  margin-bottom: calc(1px * 1.5);
   font-weight: bold;
 }
 
 .CVPrint--institution {
-  font-size: calc( 13px * 1.5);
-  margin-bottom: calc( 5px * 1.5);
+  font-size: calc(13px * 1.5);
+  margin-bottom: calc(5px * 1.5);
 }
 
 .CVPrint--description {
-  font-size: calc( 11px * 1.5);
+  font-size: calc(11px * 1.5);
 }
-
