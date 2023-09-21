@@ -257,7 +257,7 @@ li {
 }
 
 ul li::before {
-  content: "\25AA";
+  content: "\2022";
   color: #cedebd;
   display: inline-block;
   width: 1em;
