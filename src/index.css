@@ -189,7 +189,6 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   width: 100%
 }
 
@@ -265,8 +264,7 @@ ul li::before {
   color: #CEDEBD;
   font-weight: bold;
   display: inline-block; 
-  width: 2em;
-  margin-left: -1em;
+  
 }
 
 .CV--aboutMe {

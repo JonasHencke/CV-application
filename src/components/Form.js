@@ -2,6 +2,7 @@ import trashbin from "../SVG/trash-full-svgrepo-com.svg";
 import downloadSVG from "../SVG/download-svgrepo-com.svg";
 import uploadPhotoSVG from "../SVG/photo-upload-svgrepo-com.svg";
 import demo_picture from "../images/pexels-brenda-lelis-2899744.jpg"
+import documentLogo from "../SVG/demo.svg"
 
 export default function Form(props) {
   const mapSkills = props.skills.map((skill) => (
@@ -130,7 +131,7 @@ export default function Form(props) {
         <button className="downloadBtn" onClick={() => props.fillFormWithExample(demo_picture)}>
           <img
             className="Form--icon"
-            src={downloadSVG}
+            src={documentLogo}
             alt="download icon"
           ></img>
           Demo
