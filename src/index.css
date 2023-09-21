@@ -47,7 +47,8 @@ input:-webkit-autofill:active{
   gap: 2rem;
   width: 30%;
   margin-top: 40px;
-  margin-left: 3rem
+  margin-left: 3rem;
+  margin-bottom: 3rem
 }
 
 .form {
@@ -91,15 +92,6 @@ textarea {
 textarea:focus,
 input:focus {
   outline: none;
-}
-
-.input--container {
-  width: calc(100% + 4px);
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
 }
 
 .form h1 {
@@ -157,6 +149,7 @@ input:focus {
 }
 
 .form--workExperienceBundle input,
+.form--workExperienceBundle textarea,
 .form--educationBundle input {
   margin-bottom: 10px;
   border-radius: 5px;
@@ -191,6 +184,7 @@ input:focus {
   align-items: center;
   width: 100%
 }
+
 
 /* ==================
     CV component
@@ -335,6 +329,7 @@ ul li::before {
 
   .form--layout {
     margin-left: 0;
+    margin-bottom: 0;
     width: 90%;
     align-items: center;
     align-self: center;
@@ -469,3 +464,4 @@ ul li::before {
 .CVPrint--description {
   font-size: calc( 11px * 1.5);
 }
+

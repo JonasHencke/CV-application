@@ -140,7 +140,6 @@ export default function Form(props) {
       </div>
       <div className="form">
         <h1>Persönliches</h1>
-        <div className="input--container">
           <input
             className="form--input"
             type="text"
@@ -157,7 +156,6 @@ export default function Form(props) {
             placeholder="Nachname"
             onChange={props.handleUserDataChange}
           />
-        </div>
         <input
           className="form--input"
           type="text"
