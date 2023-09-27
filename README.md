@@ -2,7 +2,7 @@
 ![](https://i.imgur.com/PHUmduz.png)
 
 ## Beschreibung
-React Anwendung mit welcher man Lebensläufe erstellen und anschließend das Dokuement als PDF herunterladen kann.
+React-Anwendung mit welcher man Lebensläufe erstellen und anschließend als PDF herunterladen kann.
 
 Die in den Eingabefeldern vorgenommenen Änderungen werden auf dem Lebenslauf direkt sichtbar. Sobald der Benutzer mit dem Ergebnis zufrieden ist, ist es möglich, das Dokument über den Download-Knopf herunterzuladen.
 
@@ -10,7 +10,7 @@ Zudem kann der Benutzer den Demo-Knopf drücken, womit das Dokument komplett aus
 
 ## Demo
 
-Link zur [Live-Website](https://jonashencke.github.io/CV-application/)
+Link zur [Live-Website](https://jonashencke.github.io/CV-application/) 
 
 ## Features
 
