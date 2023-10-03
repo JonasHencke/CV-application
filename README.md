@@ -1,4 +1,4 @@
-# CV Application
+# Lebenslauf Generator
 ![](https://i.imgur.com/PHUmduz.png)
 
 ## Beschreibung
@@ -9,8 +9,11 @@ Die in den Eingabefeldern vorgenommenen Änderungen werden auf dem Lebenslauf di
 Zudem kann der Benutzer den Demo-Knopf drücken, womit das Dokument komplett ausgefüllt wird. Dies dient zur Visualisierung und Inspiration, wie ein bereits fertiger Lebenslauf aussehen kann.
 
 ## Demo
-
 Link zur [Live-Website](https://jonashencke.github.io/CV-application/) 
+
+
+https://github.com/JonasHencke/CV-application/assets/109872786/690a3f71-69fe-4cfe-a71f-54344ae6e3bb
+
 
 ## Features
 
@@ -28,8 +31,11 @@ Link zur [Live-Website](https://jonashencke.github.io/CV-application/)
 - npm:
     - jsPDF
     - html2canvas
-
 ## Quellen
 - das Bild, welches für die Demo-Funktion genutzt wird, stammt von dieser [Seite](https://www.pexels.com/de-de/foto/selektives-fokusfoto-der-frau-im-weissen-t-shirt-das-mit-grunen-pflanzen-im-hintergrund-aufwirft-2899744/)
 - die auf der Website verwendeten SVGs stammen allesamt von [SVGRepo](https://www.svgrepo.com/). Teilweise habe ich diese per Code oder mit dem Programm "Affinity Designer" verändert.
 - Als Inspiration für das Design des Lebenslaufs gilt das abgebildete Design auf dieser [Seite](https://de.postermywall.com/index.php/art/template/a2cdcd00754134f91082ece36dd4b8e2/resume-cv-template-design). Die Umsetzung des Designs in JSX und CSS code erfolgte vollständig durch meine Arbeit.
+## Google Lighthouse
+Nach der Analyse von Google Lighthouse wurde die Web-Applikation wie folgt bewertet:
+
+![](https://i.imgur.com/UEQSy72.png)
